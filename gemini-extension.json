@@ -1,0 +1,22 @@
+{
+  "name": "mcp-job-card",
+  "version": "0.21.0",
+  "description": "MCP server for job cards for trades and field service: hours and materials per job. One card per job: hours and materials logged against it, a status machine from open to invoiced, and the printed card for client sign-off.",
+  "settings": [
+    {
+      "name": "mcp.zovo.one token",
+      "description": "A free anonymous token from https://mcp.zovo.one/mcp/token, or your Pro key. One token is one data space, and it is refreshed for another 30 days on every write.",
+      "envVar": "ZOVO_MCP_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "job-card": {
+      "httpUrl": "https://mcp.zovo.one/mcp/job-card",
+      "headers": {
+        "Authorization": "Bearer ${ZOVO_MCP_TOKEN}"
+      },
+      "description": "One card per job: hours and materials logged against it, a status machine from open to invoiced, and the printed card for client sign-off."
+    }
+  }
+}
