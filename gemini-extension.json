@@ -1,6 +1,6 @@
 {
   "name": "mcp-job-card",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "MCP server for job cards for trades and field service: hours and materials per job. One card per job: hours and materials logged against it, a status machine from open to invoiced, and the printed card for client sign-off.",
   "settings": [
     {
